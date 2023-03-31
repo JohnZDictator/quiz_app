@@ -26,9 +26,10 @@ class _QuizScreenState extends State<QuizScreen> {
             children: [
               Row(
                 children: [
-                  Text(
-                    'Question ${index + 1}/${questions.length}',
-                    style: const TextStyle(
+                  const Text(
+                    // Todo: make the text update to the current question
+                    'Question 1/4',
+                    style: TextStyle(
                       color: kTextColor,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -39,18 +40,17 @@ class _QuizScreenState extends State<QuizScreen> {
                     onPressed: index < 1
                         ? null
                         : () {
-                            setState(() {
-                              index--;
-                            });
+                            // Todo: use setState to decrement the index value
                           },
                     icon: const Icon(
                       Icons.arrow_back_ios,
                       size: 16,
                     ),
                   ),
-                  Text(
-                    '${index + 1}/${questions.length}',
-                    style: const TextStyle(
+                  const Text(
+                    // Todo: make the text update to the current question
+                    '1/4',
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -59,9 +59,7 @@ class _QuizScreenState extends State<QuizScreen> {
                     onPressed: index == questions.length - 1
                         ? null
                         : () {
-                            setState(() {
-                              index++;
-                            });
+                            // Todo: use setState to increment the index value
                           },
                     icon: const Icon(
                       Icons.arrow_forward_ios,

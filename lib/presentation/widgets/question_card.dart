@@ -174,14 +174,8 @@ class _QuestionCardState extends State<QuestionCard> {
                     child: InkWell(
                       onTap: () {
                         int score = calculateScore(choiceAnswer);
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => ResultScreen(
-                              actualScore: score,
-                              totalScore: widget.questionLength,
-                            ),
-                          ),
-                        );
+                        // Todo: Navigate to the result screen
+                        // Todo: pass the score and the number of questions as parameter to result screen
                       },
                       child: Container(
                         padding: const EdgeInsets.symmetric(
@@ -207,12 +201,8 @@ class _QuestionCardState extends State<QuestionCard> {
   }
 
   int calculateScore(List<int?> answers) {
-    int scoreCount = 0;
-    for (int index = 0; index < answers.length; index++) {
-      if (answers[index] == sample_data[index].answer) {
-        scoreCount++;
-      }
-    }
-    return scoreCount;
+    // Todo: calculate how many questions were answered correctly
+    // Todo: return the calculated result
+    return 0;
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/presentation/screens/screens.dart';
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen(
@@ -17,10 +16,8 @@ class ResultScreen extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(),
-              SizedBox(
-                width: 300,
-                child: Image.asset('assets/images/a2sv-logo.png'),
-              ),
+              // Todo: Add image widget
+              // Todo: fetch the image from 
               const Text(
                 'Score',
                 style: TextStyle(
@@ -30,9 +27,10 @@ class ResultScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              Text(
-                '$actualScore / $totalScore',
-                style: const TextStyle(
+              const Text(
+                // Todo: display the score
+                '0/4',
+                style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,
                 ),
@@ -40,12 +38,7 @@ class ResultScreen extends StatelessWidget {
               const SizedBox(height: 20),
               InkWell(
                 onTap: () {
-                  Navigator.of(context).pushAndRemoveUntil(
-                    MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            const WelcomeScreen()),
-                    (route) => false,
-                  );
+                  // Todo: Navigate back to welcome screen
                 },
                 child: Container(
                   padding:
