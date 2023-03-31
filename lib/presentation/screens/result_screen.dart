@@ -15,8 +15,12 @@ class ResultScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const Spacer(),
+              SizedBox(
+                width: 300,
+                child: Image.asset('assets/images/a2sv-logo.png'),
+              ),
               const Text(
                 'Score',
                 style: TextStyle(
@@ -59,6 +63,7 @@ class ResultScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              const Spacer(flex: 3)
             ],
           ),
         ),
